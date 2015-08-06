@@ -62,7 +62,7 @@ to show how to serve a "Hello World" webpage.
 
        .. code-block:: html
 
-         Hello {{ . }}
+         Hello {{ .name }}
 
      - in *index.html*:
 
@@ -74,7 +74,9 @@ to show how to serve a "Hello World" webpage.
 
        .. code-block:: go
 
-         template_values := "World"
+         templateValues := map[string]interface{}
+                    "name": "World",
+         }
 
      - setup tempalate value in Python:
 
